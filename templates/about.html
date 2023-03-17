@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page info -->
+<div class="page-info-section set-bg" data-setbg="{% static 'webuni/img/page-bg/4.jpg' %}">
+  <div class="container">
+    <div class="site-breadcrumb">
+      <a href="/">Главная</a>
+      <span>о нас</span>
+    </div>
+  </div>
+</div>
+<!-- Page info end -->
+
+
+<section class="about-us py-5 " id="about-us">
+    <div class="container mt-5">
+	<div class="row">
+		<div class="col-md-6">
+		    <h1 class='text-primary'>Привет!</h1>
+		    <h2>Добро пожаловать на нашу образовательную платформу! </h2>
+		    <hr>
+		    <p>Мы стремимся предоставить качественное образование в доступной и удобной форме. У нас вы найдете множество видео и текстовых курсов по различным темам, которые помогут вам улучшить свои навыки и расширить кругозор.</p>
+			<p>Мы понимаем, что обучение может быть трудным и утомительным, поэтому мы сделали все возможное, чтобы наша платформа была интуитивно понятной </p>
+			<button type="button" class="btn btn-primary">Вперёд к знаниям!</button>
+
+		</div>
+		<div class="col-md-6">
+		    <img src="http://themebubble.com/demo/marketingpro/wp-content/uploads/2016/10/seo-slide.png "alt="">
+		</div>
+	</div>
+</div>
+</section>
+{% endblock %}
