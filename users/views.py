@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from users.forms import profileUpdateForm, userUpdateForm
 from users.models import Profile as Pro
-from users.models import Kerkesat
+from users.models import Requests
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, redirect
@@ -60,7 +60,7 @@ def kerkesa(request):
         email = request.POST.get('e-mail')
         numri_tel = request.POST.get('phone')
         prof = request.user.profile
-        kerkesa = Kerkesat(profili=prof, emri=emri, email=email, numri_tel=numri_tel)
+        kerkesa = Requests(profili=prof, emri=emri, email=email, numri_tel=numri_tel)
         kerkesa.save()
         prof_id = prof.id
         Pro.objects.filter(id=prof_id).update(is_teacher=True)

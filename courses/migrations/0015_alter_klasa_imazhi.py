@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name='klasa',
-            name='imazhi',
+            name='images',
             field=models.ImageField(default='cat_images/default.jpg', upload_to='cat_images'),
         ),
     ]

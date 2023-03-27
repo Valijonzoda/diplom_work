@@ -186,6 +186,9 @@ EMAIL_HOST_USER='put your email here'
 EMAIL_HOST_PASSWORD='put your email password here'
 EMAIL_PORT = 587 
 
+#migrate error fix. versions error !!
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 if DEBUG:
     STRIPE_PUBLISHABLE_KEY = 'pk_test_LI02rx6BCdiFgRYQbCaU28o0'

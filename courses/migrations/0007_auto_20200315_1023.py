@@ -17,16 +17,16 @@ class Migration(migrations.Migration):
         migrations.RenameField(
             model_name='klasa',
             old_name='image',
-            new_name='imazhi',
+            new_name='images',
         ),
         migrations.RenameField(
             model_name='klasa',
             old_name='short_description',
-            new_name='pershkrimi',
+            new_name='description',
         ),
         migrations.RenameField(
             model_name='klasa',
             old_name='title',
-            new_name='titulli',
+            new_name='titles',
         ),
     ]

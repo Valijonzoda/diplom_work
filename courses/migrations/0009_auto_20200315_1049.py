@@ -16,9 +16,9 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('slug', models.SlugField()),
-                ('titulli', models.CharField(max_length=30)),
+                ('titles', models.CharField(max_length=30)),
                 ('video_id', models.CharField(max_length=15)),
-                ('pozicioni', models.IntegerField()),
+                ('positions', models.IntegerField()),
                 ('lenda', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='courses.Lendet')),
             ],
         ),

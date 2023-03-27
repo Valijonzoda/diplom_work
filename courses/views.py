@@ -56,7 +56,7 @@ class LessonDetailView(View,LoginRequiredMixin):
 def SearchView(request):
     if request.method == 'POST':
         kerko = request.POST.get('search')
-        results = Lesson.objects.filter(titulli__contains=kerko)
+        results = Lesson.objects.filter(titles__contains=kerko)
         context = {
             'results':results
         }

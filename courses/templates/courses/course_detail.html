@@ -86,7 +86,7 @@
           {% if course.lessons != None  %}
             {% for lesson in course.lessons %}
             <div data-aos="fade-right" >
-              <h5 class="pb-3">Учитель {{lesson.pozicioni}} <a id="vazhdo" href="{{ lesson.get_absolute_url }}#video"><span class="pl-4">{{lesson.titulli}}</span></a></h5>
+              <h5 class="pb-3">Учитель {{lesson.positions}} <a id="vazhdo" href="{{ lesson.get_absolute_url }}#video"><span class="pl-4">{{lesson.titulli}}</span></a></h5>
             </div>
             {% endfor %}
           {% endif %}

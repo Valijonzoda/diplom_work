@@ -9,23 +9,23 @@ class KlasaForm(forms.ModelForm):
         model = Klasa
         fields = '__all__'
         help_texts = {
-            'titulli': 'Psh. Klasa 11 ose Klasa e Informatikes',
-            'pershkrimi':'Vendos nje pershkrim te shkurte te klases',
-            'imazhi':'Mund te vendosesh nje fotografi e klases ose mund te lihet bosh'
+            'titles': 'Psh. Klasa 11 ose Klasa e Informatikes',
+            'description':'Vendos nje pershkrim te shkurte te klases',
+            'images':'Mund te vendosesh nje fotografi e klases ose mund te lihet bosh'
         }
 
 class LendaForm(forms.ModelForm):
     class Meta:
         model = Lendet
-        fields = ['krijues','slug', 'titulli', 'klasa', 'pershkrimi', 'imazhi_lendes']
+        fields = ['krijues','slug', 'titles', 'klasa', 'description', 'images_len']
         help_texts = {
-            'titulli': 'Psh. Matematika, Gjeografi etj',
-            'pershkrimi':'Vendos nje pershkrim te shkurte te lendes',
+            'titles': 'Psh. Matematika, Gjeografi etj',
+            'description':'Vendos nje pershkrim te shkurte te lendes',
             'klasa':'Zhgjidhni klasen per te cilen do te krijoni lenden',
-            'imazhi_lendes':'Mund te vendosesh nje fotografi e lendes ose mund te lihet bosh'
+            'images_len':'Mund te vendosesh nje fotografi e lendes ose mund te lihet bosh'
         }
         labels = {
-            'titulli':'Titulli i lendes'
+            'titles':'Titulli i lendes'
         }
         widgets = {'krijues': forms.HiddenInput(), 'slug': forms.HiddenInput()}
 
@@ -33,12 +33,12 @@ class LendaForm(forms.ModelForm):
 class MesimiForm(forms.ModelForm):
     class Meta:
         model = Lesson 
-        fields = ['slug','titulli', 'lenda', 'video_id', 'pozicioni', ]
+        fields = ['slug','titles', 'lenda', 'video_id', 'positions', ]
         help_texts = {
-            'titulli':'Vendosni titullin e mesimit',
+            'titles':'Vendosni titlesn e mesimit',
             'lenda':'Zgjidhni lenden per te cilen i perket ky mesim',
             'video_id':'Vendosni ID e videos nga Youtube te cilen do te ngarkoni (<a href="/media/youtube_help.png">ku mund ta gjej ID</a>)',
-            'pozicioni':'Vendosni numrin e pozicionit ose radhen e mesimit '
+            'positions':'Vendosni numrin e positionst ose radhen e mesimit '
         }
         widgets = {
             'slug': forms.HiddenInput()
