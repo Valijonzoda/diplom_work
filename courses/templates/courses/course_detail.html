@@ -46,12 +46,12 @@
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
           
-          <h3>{{course.titulli|capfirst}}</h3>
+          <h3>{{course.title|capfirst}}</h3>
           <div class="course-metas">
             <div class="course-meta">
               <div class="course-author">
                 <h6>Учитель</h6>
-                <p>{{course.krijues|capfirst}}, <span>Учитель</span></p>
+                <p>{{course.creators|capfirst}}, <span>Учитель</span></p>
               </div>
             </div>
             <div class="course-meta">
@@ -68,7 +68,7 @@
             </div>
             <div class="course-meta">
               <div class="cm-info">
-                <h6>Название или номер</h6>
+                <h6>Уроки </h6>
                 <p>{{ course.lessons|length }}</p>
               </div>
             </div>
@@ -86,7 +86,7 @@
           {% if course.lessons != None  %}
             {% for lesson in course.lessons %}
             <div data-aos="fade-right" >
-              <h5 class="pb-3">Учитель {{lesson.positions}} <a id="vazhdo" href="{{ lesson.get_absolute_url }}#video"><span class="pl-4">{{lesson.titulli}}</span></a></h5>
+              <h5 class="pb-3">Учитель {{lesson.positions}} <a id="vazhdo" href="{{ lesson.get_absolute_url }}#video"><span class="pl-4">{{lesson.title}}</span></a></h5>
             </div>
             {% endfor %}
           {% endif %}

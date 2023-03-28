@@ -9,20 +9,20 @@ class KlasaForm(forms.ModelForm):
         model = Klasa
         fields = '__all__'
         help_texts = {
-            'titles': 'Psh. Klasa 11 ose Klasa e Informatikes',
-            'description':'Vendos nje pershkrim te shkurte te klases',
-            'images':'Mund te vendosesh nje fotografi e klases ose mund te lihet bosh'
+            'titles': '',
+            'description':'',
+            'images':'M'
         }
 
 class LendaForm(forms.ModelForm):
     class Meta:
         model = Lendet
-        fields = ['krijues','slug', 'titles', 'klasa', 'description', 'images_len']
+        fields = ['slug', 'titles', 'description', 'images_len']#'krijues', 'klasa',
         help_texts = {
-            'titles': 'Psh. Matematika, Gjeografi etj',
-            'description':'Vendos nje pershkrim te shkurte te lendes',
-            'klasa':'Zhgjidhni klasen per te cilen do te krijoni lenden',
-            'images_len':'Mund te vendosesh nje fotografi e lendes ose mund te lihet bosh'
+            'titles': '',
+            'description':'',
+            'klasa':'',
+            'images_len':''
         }
         labels = {
             'titles':'Titulli i lendes'

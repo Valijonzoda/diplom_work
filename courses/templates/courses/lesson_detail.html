@@ -16,18 +16,11 @@
     </div>
   </div>
 </div>
-  <!-- {% if lesson is not None %}
-	<li class="form-control"><a  href="{{ lesson.course.get_absolute_url }}">Mesimi : {{ lesson.course.titulli }}</a></li>
-	<li class="form-control">Title : {{ lesson.titulli }}</li>
-  {% endif %} -->
-
-<!-- Page info end -->
-
 	<div class='container' id="video">
 		<div class="alert alert-info" role="alert">
 			Нажмите дважды на видео для полноэкранного просмотра!
 		  </div>
-		<h1>{{ lesson.titulli }}</h1>
+		<h1>{{ lesson.title }}</h1>
 		<div class='row'>
 			<div class='col-sm-12 col-md-12'>
 				{% if lesson is not None %}
